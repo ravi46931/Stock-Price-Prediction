@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+</head>
+<body>
+    <h1 class="heading-title"> Forecasting Stock Price</h1>
+    <div class="pra">{{stock}} stock is used in this project. The model is trained on the previous {{time_span//365}} years
+        stock prices. The visualization of the stock price for Open, High, Low, Close price of the stock with 
+        respect to the year.
+    </div>
+    <div>
+    <img
+        src="{{ url_for('static', filename='images/ohlc.png') }}"
+        alt="OHLC Image"
+        class="ohlc-img"
+      />
+      <br>
+
+<div class="pra">
+    The model is trained on {{epochs}} epochs. The visualization of the mean absolute error 
+    and training loss with respect to the epochs is plotted as follows.
+</div>
+
+    <img
+        src="{{ url_for('static', filename='images/mae_loss.png') }}"
+        alt="mae_loss Image"
+        class="mae_loss-img"
+        
+      />
+      <br>
+      <div class="pra">
+        Take some closer look of this visualization.
+      </div>
+
+    <img
+        src="{{ url_for('static', filename='images/mae_loss_zoom.png') }}"
+        alt="mae_loss_zoom Image"
+        class="mae_loss-img"
+      />
+<br>
+<div class="pra">After training the model, the results are as follows</div>
+    <img
+        src="{{ url_for('static', filename='images/pred_act_train.png') }}"
+        alt="pred_act_train Image"
+        class="pred_act_train-img"
+      />
+      <br>
+      <div class="pra">
+        Comparision of the actual and predicted values for the test dataset.
+      </div>
+     
+    <img
+        src="{{ url_for('static', filename='images/pred_act_test.png') }}"
+        alt="pred_act_test Image"
+        class="pred_act_test-img"
+      />
+      <br>
+      <div class="pra"> A customized visualization.</div>
+    <img
+        src="{{ url_for('static', filename='images/custom_plot.png') }}"
+        alt="custom_plot Image"
+        class="custom_plot-img"
+      />
+      <br>
+<div class="pra">Forecasting the results for next 150 days.</div>
+    <img
+        src="{{ url_for('static', filename='images/forecast.png') }}"
+        alt="forecast Image"
+        class="forecast-img"
+      />
+      <br>
+
+    </div>
+</body>
+</html>

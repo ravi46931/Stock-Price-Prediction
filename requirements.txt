@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+pandas_datareader
+yfinance
+
+scikit-learn
+tensorflow
+flask
+black
+colorama
+
+-e .
